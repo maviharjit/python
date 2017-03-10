@@ -1,0 +1,7 @@
+#!/bin/python
+# credit http://serverfault.com/questions/193425/verify-connectivity-to-a-server-on-a-udp-port
+import socket
+host="10.10.10.10"
+port=12345
+udp_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+udp_sock.sendto('PING', (host, port))
